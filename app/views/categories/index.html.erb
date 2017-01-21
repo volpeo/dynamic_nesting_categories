@@ -1,0 +1,5 @@
+
+
+<%= arranged_tree_as_list(@categories) do |category| %>
+  <%= link_to category.name, category_path(category) %>
+<% end %>

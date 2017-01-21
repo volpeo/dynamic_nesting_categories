@@ -1,7 +1,32 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+archaea = Category.create!(name: "Archaea")
+bacteria = Category.create!(name: "Bacteria")
+protista = Category.create!(name: "Protista")
+fungi = Category.create!(name: "Fungi")
+plantae = Category.create!(name: "Plantae")
+animalia = Category.create!(name: "Animalia")
+
+arthropoda = Category.create!(name: "Arthropoda", parent: animalia)
+mollusca = Category.create!(name: "Mollusca", parent: animalia)
+nematoda = Category.create!(name: "Nematoda", parent: animalia)
+chordata = Category.create!(name: "Chordata", parent: animalia)
+platyhelminthes = Category.create!(name: "Platyhelminthes", parent: animalia)
+annelida = Category.create!(name: "Annelida", parent: animalia)
+cnidaria = Category.create!(name: "Cnidaria", parent: animalia)
+echinodermata = Category.create!(name: "Echinodermata", parent: animalia)
+porifera = Category.create!(name: "Porifera", parent: animalia)
+
+tunicata = Category.create!(name: "Tunicata", parent: chordata)
+cephalochordata = Category.create!(name: "Cephalochordata", parent: chordata)
+vertebrata = Category.create!(name: "Vertebrata", parent: chordata)
+
+agnatha = Category.create!(name: "Agnatha", parent: vertebrata)
+gnathostomata = Category.create!(name: "Gnathostomata", parent: vertebrata)
+
+chondrichthyes = Category.create!(name: "Chondrichthyes", parent: gnathostomata)
+osteichthyes = Category.create!(name: "Osteichthyes", parent: gnathostomata)
+tetrapoda = Category.create!(name: "Tetrapoda", parent: gnathostomata)
+
+amphibia = Category.create!(name: "Amphibia", parent: tetrapoda)
+aves = Category.create!(name: "Aves", parent: tetrapoda)
+reptilia = Category.create!(name: "Reptilia", parent: tetrapoda)
+ammalia = Category.create!(name: "Mammalia", parent: tetrapoda)
